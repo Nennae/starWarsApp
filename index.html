@@ -5,51 +5,57 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
       <title>Star Wars App</title>
 </head>
 <body>
       <header class="header">
-            <h1 class="title">STAR WARS</h1>
-            <p class="subtitle">"You’re all clear, kid. Now blow this thing and go home!"</p>
+                  <img class="logo" src="./images/Star_Wars-Logo.wine.svg" width="450" alt=""
+                  />
       </header>
       <main class="main">
             <form action="">
-                  <label for="select1">Choose Character 1</label>
-      
+                  <label class="select1" for="select1">Choose Character 1</label>
                   <select name="select1" id="select1">
                         <option value="Luke Skywalker">Luke Skywalker</option>
                         <option value="Obiwan Kenobi">Obiwan Kenobi</option>
                         <option value="Chewbacca">Chewbacca</option>
-                        <option value="Owen Lars">Owen Lars</option>
                         <option value="Darth Wader">Darth Wader</option>
-                        <option value="Beru Lars">Beru Lars</option>
                         <option value="Biggs Darklighter">Biggs Darklighter</option>
                         <option value="R5-D4">R5-D4</option>
                         <option value="Leia Organa">Leia Organa</option>
                         <option value="C-3PO">C-3PO</option>
                   </select>
-                  <label for="select2">Choose Character 2</label>
-            
+                  </form>
+                  <form>
+                  <label class="select2" for="select2">Choose Character 2</label>
                   <select name="select2" id="select2">
                         <option value="Luke Skywalker">Luke Skywalker</option>
                         <option value="Obiwan Kenobi">Obiwan Kenobi</option>
                         <option value="Chewbacca">Chewbacca</option>
-                        <option value="Owen Lars">Owen Lars</option>
                         <option value="Darth Wader">Darth Wader</option>
-                        <option value="Beru Lars">Beru Lars</option>
                         <option value="Biggs Darklighter">Biggs Darklighter</option>
                         <option value="R5-D4">R5-D4</option>
                         <option value="Leia Organa">Leia Organa</option>
                         <option value="C-3PO">C-3PO</option>
                   </select>
-                  <button id="submitBtn">Submit</button>
+                  
             </form>
-            <div id="character1" class="character1">
+            <div class="btnContainer">
+            <button class="button submitBtn" id="submitBtn">SUBMIT</button>
+            <button class="button resetBtn" id="resetBtn">RESET</button>
+      </div>
+            <div class="characterContainer">
+            <ul id="character1" class="character">
                   <!-- Template Literal inserted with JS -->
-            </div>
-            <div id="character2" class="character2">
+            </ul>
+            <ul id="character2" class="character">
                   <!-- Template Literal inserted with JS -->
-            </div>
+            </ul>
+      </div>
       </main>
       <script src="js/main.js" type="module" defer></script>
 </body>

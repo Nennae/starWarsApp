@@ -1,95 +1,66 @@
+import { Characters } from "../js/characters.js";
+import { getCharacters } from "../js/swapi.js";
 
-// DOM elements
-let select1 = document.querySelector("#select1");
-let select2 = document.querySelector("#select2");
-let selected1 = select1.value;
-let selected2 = select2.value;
+console.log(Characters);
+console.log(getCharacters);
 
-const button = document.querySelector("#submitBtn");
-const charCard1 = document.querySelector("#charContainer1");
-const charCard2 = document.querySelector("#charContainer2");
-const mainContent = document.getElementById("main");
+      function createCharCard (character) {
 
-      let getCharacters = async (url) => {
-            let response = await fetch(url);
-            let json = await response.json();
-            return json;
-      };
+            let image = document.createElement("img");
+            image.classList.add("image");
+            image.src = `${character.pictureURL}`;
+            image.alt = `image of ${character.name}`;
+
+            let characterCard = document.createElement("div");
+            characterCard.classList.add("characterCard");
+            characterCard.innerHTML= `<h2>Hey! I'm <span class="nameStyle">${character.name}.</span></h2>`;
+
+            let genderBtn = document.createElement("button");
+            genderBtn.classList.add("genderBtn");
+            genderBtn.innerText = "Compare Gender";
+
+            let weightBtn = document.createElement("button");
+            weightBtn.classList.add("weightBtn");
+            weightBtn.innerText = "Compare Weight";
+
+            let heightBtn = document.createElement("button");
+            heightBtn.classList.add("heightBtn");
+            heightBtn.innerText = "Compare Height";
+
+            let haircolorBtn = document.createElement("button");
+            haircolorBtn.innerText = "haircolorBtn";
+            haircolorBtn.innerText = "Compare Haircolor";
+
+            characterCard.appendChild(image);
+            characterCard.appendChild(genderBtn);
+            characterCard.appendChild(weightBtn);
+            characterCard.appendChild(heightBtn);
+            characterCard.appendChild(haircolorBtn);
+
+            mainContent.appendChild(characterCard);
+      }
+
+      const submitBtn = document.querySelector("#submitBtn");
+      const resetBtn = document.querySelector("#resetBtn");
+      const mainContent = document.getElementById("main");
       
-      const renderCharacters = async () => {
-            let characters = getCharacters("https://swapi.dev/api/people");
-            console.log(characters);
-      }
-      renderCharacters();
-
-      let getCharImage = async (url) => {
-            let response = await fetch(url);
-            let json = await response.json();
-            return json;
-      }
-      class Characters {
-            constructor(name, gender, height, mass, hairColor, pictureURL) {
-      console.log("Ditt objekt är nu skapat!");
-                  this.name = name;
-                  this.gender = gender;
-                  this.height = height;
-                  this.mass = mass;
-                  this.hairColor = hairColor;
-                  this.pictureURL 
-                  switch(name) {
-                        case name === "Luke Skywalker" :
-                              this.pictureURL = "./images/luke_skywalker.jpeg"
-                              break;
-                        case  name === "Obiwan Kenobi" :
-                              this.pictureURL = "./images/obiwan_kenobi.jpg"
-                              break;
-                        case  name === "Leia Organa" :
-                              this.pictureURL = "./images/leiaiv.jpeg"
-                              break;
-                        case  name === "Darth Vader" :
-                              this.pictureURL = "./images/darth-vader-cool.jpeg"
-                              break;
-                        case  name === "Chewbacca" :
-                              this.pictureURL = "./images/chewierawr.jpeg"
-                              break;
-                        case  name === "Biggs Darklighter" :
-                              this.pictureURL = "./images/Biggs.jpg"
-                              break;
-                        case  name === "R5-D4" :
-                              this.pictureURL = "./images/R5-D4.jpeg"
-                              break;
-                        case  name === "C-3PO" :
-                              this.pictureURL = "./images/C-3PO.jpeg"
-                              break;
-                  }
+      submitBtn.addEventListener("click", () => {
+            createCharCard();
+            let charContainer1 = document.querySelector("#character1");
+            let charContainer2 = document.querySelector("#character2");
+            let select1 = document.querySelector("#select1").value;
+            let select2 = document.querySelector("#select2").value;
+            if(select1 !== select2) {
+                  let charInfo1 = document.createElement("li");
+                  charContainer1.appendChild(charInfo1);
+                  let charInfo2 = document.createElement("li");
+                  charContainer2.appendChild(charInfo2);
+            } else if (select1 === select2) {
+                  console.log("Please choose two different characters!")
             }
-            compareWeight(character){
-                  return (this.mass - character.mass)
-            }
-            compareHeight(character){
-                  return (this.height - character.height)
-            }
-            compareHairColor(character){
-                  return (this.hairColor === character.hairColor)
-            }
-            compareGender(character){
-                  return (this.gender === character.gender)
-            }
-      }
+      })
 
-// let characters = [];
-// let chosenCharacters = [];
-// let firstCharacter = new Characters()
-// let secondCharacter = new Characters()
+resetBtn.addEventListener("click", () => {
+      location.reload();
+})
 
-// Display images of chosen characters EVENT
-
-/* Display information about chosen characters and the 4 buttons that answers questions EVENT */
-
-// EVENT: Display comparison / answer, under character 
-
-// 
-
-// button.addEventListener("click" () => {
-      
-// });
