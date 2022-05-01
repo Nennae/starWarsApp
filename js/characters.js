@@ -5,7 +5,7 @@ export class Characters {
             this.height = height;
             this.mass = mass;
             this.hairColor = hairColor;
-            this.pictureURL = this.pictureURL
+            this.pictureURL = pictureURL
       }
       
       compareWeight(character){
