@@ -59,25 +59,25 @@ import { getCharacters } from "../js/swapi.js";
                         let weightDiff = character.compareWeight(otherChar);
                         e.preventDefault();
                         if (weightDiff > 0){
-                              characterInfo.innerHTML = `<li>${character.name} weighs ${character.mass} kg and is ${weightDiff} kg heavier than ${otherChar.name}
+                              characterInfo.innerHTML = `<li>${otherChar.name} weighs ${otherChar.mass} kg and is ${Math.abs(weightDiff)} kg lighter than ${character.name}
                               </li>`
                         } else if (weightDiff < 0) {
-                              characterInfo.innerHTML = `<li>${character.name} weighs ${character.mass} kg and is ${Math.abs(weightDiff)} kg lighter than ${otherChar.name}</li>`
+                              characterInfo.innerHTML = `<li>${otherChar.name} weighs ${otherChar.mass} kg and is ${Math.abs(weightDiff)} kg heavier than ${character.name}</li>`
                         } else {
-                              characterInfo.innerHTML = `<li>${character.name} weighs ${character.mass} and so do ${otherChar.name}</li>`
+                              characterInfo.innerHTML = `<li>${otherChar.name} weighs ${otherChar.mass} and so do ${character.name}</li>`
                         }
                   })
       
                   heightBtn.addEventListener("click", (e) => {
                         let heightDiff = character.compareHeight(otherChar);
                         e.preventDefault();
-                        if (heightDiff > 0){
-                              characterInfo.innerHTML = `<li>${character.name} is ${character.height} cm tall, and is ${heightDiff} cm taller than ${otherChar.name}
+                        if (heightDiff < 0){
+                              characterInfo.innerHTML = `<li>${otherChar.name} is ${otherChar.height} cm tall, and is ${Math.abs(heightDiff)} cm taller than ${character.name}
                               </li>`
-                        } else if (heightDiff < 0) {
-                              characterInfo.innerHTML = `<li>${character.name} is ${character.height} cm tall, and is ${Math.abs(heightDiff)} cm shorter than ${otherChar.name}</li>`
+                        } else if (heightDiff > 0) {
+                              characterInfo.innerHTML = `<li>${otherChar.name} is ${otherChar.height} cm tall, and is ${Math.abs(heightDiff)} cm shorter than ${character.name}</li>`
                         } else {
-                              characterInfo.innerHTML = `<li>${character.name} is ${character.height} tall, and so is ${otherChar.name}</li>`
+                              characterInfo.innerHTML = `<li>${otherChar.name} is ${otherChar.height} tall, and so is ${character.name}</li>`
                         }
                   })
       
@@ -85,10 +85,10 @@ import { getCharacters } from "../js/swapi.js";
                         let hairColor = character.compareHairColor(otherChar);
                         e.preventDefault();
                         if (hairColor){
-                              characterInfo.innerHTML = `<li>${character.name} and     ${otherChar.name} has the same hair color which is ${character.hairColor}
+                              characterInfo.innerHTML = `<li>${otherChar.name} and     ${character.name} has the same hair color which is ${character.hairColor}
                               </li>`
                         } else {
-                              characterInfo.innerHTML = `<li>${character.name}s hair color is ${character.hairColor} and ${otherChar.name}s is ${otherChar.hairColor}
+                              characterInfo.innerHTML = `<li>${otherChar.name}s hair color is ${otherChar.hairColor} and ${character.name}s is ${character.hairColor}
                               </li>`
                         }
                   })
@@ -97,10 +97,10 @@ import { getCharacters } from "../js/swapi.js";
                         let gender = character.compareGender(otherChar);
                         e.preventDefault();
                         if (gender){
-                              characterInfo.innerHTML = `<li>${character.name} and ${otherChar.name} has the same gender which is ${character.gender}
+                              characterInfo.innerHTML = `<li>${otherChar.name} and ${character.name} has the same gender which is ${character.gender}
                               </li>`
                         } else {
-                              characterInfo.innerHTML = `<li>${character.name}s gender is ${character.gender} and ${otherChar.name}s is ${otherChar.gender}
+                              characterInfo.innerHTML = `<li>${otherChar.name}s gender is ${otherChar.gender} and ${character.name}s is ${character.gender}
                               </li>`
                         }
                   })
