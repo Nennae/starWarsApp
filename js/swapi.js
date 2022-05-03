@@ -4,7 +4,7 @@ export let getCharacters = async (names) => {
 
       let charImgs = {
             "Luke Skywalker": "./images/luke_skywalker.jpeg",
-            "Obiwan Kenobi": "./images/obiwan_kenobi.jpg",
+            "Obi-Wan Kenobi": "./images/obiwan.jpeg",
             "Leia Organa": "./images/leiaiv.jpeg",
             "Darth Vader": "./images/darth-vader-cool.jpeg",
             "Chewbacca": "./images/chewierawr.jpeg",
@@ -21,7 +21,7 @@ export let getCharacters = async (names) => {
             characterInfo.results[0].gender,
             parseInt(characterInfo.results[0].height),
             parseInt(characterInfo.results[0].mass),
-            characterInfo.results[0].hairColor,
+            characterInfo.results[0].hair_color,
             charImgs[characterInfo.results[0].name]
       );
 };    

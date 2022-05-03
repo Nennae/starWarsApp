@@ -55,7 +55,7 @@ select {
       margin-left: 20px; 
       background: rgb(119, 208, 240);
 }
-.submitBtn:hover{
+.submitBtn:hover {
       background: rgb(37, 37, 39);
       color: #FFE81F;
       border: 1px solid #FFE81F;
@@ -72,12 +72,37 @@ select {
 .characterContainer {
       display: flex;
       flex-direction: column;
+      padding: 30px 0;
+      min-height: 70vh;
+}
+.characterName {
+      text-align: center;
+      margin-top: 15px;
 }
 
-.character {
-      width: 300px;
-      height: 400px;
-      border: 3px solid white;
-      margin-bottom:30px ;
+.buttonContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      margin: 20px;
 }
+.buttonContainer > button {
+      padding: 15px 10px;
+      background: rgb(37, 37, 39);
+      color: #FFE81F;
+      border: 1px solid #FFE81F;
+      border-radius: 7px;
+      margin: 5px;
+      font-size: 1.05rem;
+      min-width: 160px;
+}
+.buttonContainer > button:hover {
+      background: #FFE81F;
+      color: black;
+      border: none;
+      transition-duration: 0.8s;
+}
+
+
 

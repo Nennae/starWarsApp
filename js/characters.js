@@ -1,11 +1,11 @@
 export class Characters {
-      constructor(name, gender, height, mass, hairColor) {
+      constructor(name, gender, height, mass, hairColor, pictureURL) {
             this.name = name;
             this.gender = gender;
             this.height = height;
             this.mass = mass;
             this.hairColor = hairColor;
-            this.pictureURL = pictureURL
+            this.pictureURL = pictureURL;
       }
       
       compareWeight(character){

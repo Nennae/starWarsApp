@@ -17,13 +17,13 @@
                   />
       </header>
       <main class="main">
-            <form action="">
+            <form>
                   <label class="select1" for="select1">Choose Character 1</label>
-                  <select name="select1" id="select1">
+                  <select name="select1" id="select1" class="select">
                         <option value="Luke Skywalker">Luke Skywalker</option>
-                        <option value="Obiwan Kenobi">Obiwan Kenobi</option>
+                        <option value="Obi-Wan Kenobi">Obi-Wan Kenobi</option>
                         <option value="Chewbacca">Chewbacca</option>
-                        <option value="Darth Wader">Darth Wader</option>
+                        <option value="Darth Vader">Darth Vader</option>
                         <option value="Biggs Darklighter">Biggs Darklighter</option>
                         <option value="R5-D4">R5-D4</option>
                         <option value="Leia Organa">Leia Organa</option>
@@ -32,11 +32,11 @@
                   </form>
                   <form>
                   <label class="select2" for="select2">Choose Character 2</label>
-                  <select name="select2" id="select2">
+                  <select name="select2" id="select2" class="select">
                         <option value="Luke Skywalker">Luke Skywalker</option>
-                        <option value="Obiwan Kenobi">Obiwan Kenobi</option>
+                        <option value="Obi-Wan Kenobi">Obi-Wan Kenobi</option>
                         <option value="Chewbacca">Chewbacca</option>
-                        <option value="Darth Wader">Darth Wader</option>
+                        <option value="Darth Vader">Darth Vader</option>
                         <option value="Biggs Darklighter">Biggs Darklighter</option>
                         <option value="R5-D4">R5-D4</option>
                         <option value="Leia Organa">Leia Organa</option>
@@ -48,14 +48,22 @@
             <button class="button submitBtn" id="submitBtn">SUBMIT</button>
             <button class="button resetBtn" id="resetBtn">RESET</button>
       </div>
+            <p id="message"></p>
+            <ul class="characterInfo">
+                  <!--COMPARE TEXTS-->
+            </ul>
             <div class="characterContainer">
-            <ul id="character1" class="character">
-                  <!-- Template Literal inserted with JS -->
-            </ul>
-            <ul id="character2" class="character">
-                  <!-- Template Literal inserted with JS -->
-            </ul>
-      </div>
+                  <div class="characterIntro1 characterIntro">
+                        <!--IMAGE-->
+                        <!--NAME INTRO-->
+                        <!--COMPARE BUTTONS-->
+                  </div>
+                  <div class="characterIntro2 characterIntro">
+                        <!--IMAGE-->
+                        <!--NAME INTRO-->
+                        <!--COMPARE BUTTONS-->
+                  </div>
+            </div>
       </main>     
       <script src="js/main.js" type="module" defer></script>
 </body>
