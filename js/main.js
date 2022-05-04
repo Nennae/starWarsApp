@@ -66,6 +66,7 @@ import { getCharacters } from "../js/swapi.js";
                         } else {
                               characterInfo.innerHTML = `<li>${otherChar.name} weighs ${otherChar.mass} and so do ${character.name}</li>`
                         }
+                        characterInfo.scrollIntoView({behavior: "smooth"});
                   })
       
                   heightBtn.addEventListener("click", (e) => {
@@ -79,6 +80,7 @@ import { getCharacters } from "../js/swapi.js";
                         } else {
                               characterInfo.innerHTML = `<li>${otherChar.name} is ${otherChar.height} tall, and so is ${character.name}</li>`
                         }
+                        characterInfo.scrollIntoView({behavior: "smooth"});
                   })
       
                   haircolorBtn.addEventListener("click", (e) => {
@@ -91,6 +93,7 @@ import { getCharacters } from "../js/swapi.js";
                               characterInfo.innerHTML = `<li>${otherChar.name}s hair color is ${otherChar.hairColor} and ${character.name}s is ${character.hairColor}
                               </li>`
                         }
+                        characterInfo.scrollIntoView({behavior: "smooth"});
                   })
       
                   genderBtn.addEventListener("click", (e) => {
@@ -103,6 +106,7 @@ import { getCharacters } from "../js/swapi.js";
                               characterInfo.innerHTML = `<li>${otherChar.name}s gender is ${otherChar.gender} and ${character.name}s is ${character.gender}
                               </li>`
                         }
+                        characterInfo.scrollIntoView({behavior: "smooth"});
                   })
       }
 
@@ -129,7 +133,6 @@ import { getCharacters } from "../js/swapi.js";
                   input.value = "Luke Skywalker";
                   characterInfo.innerHTML = "";
             })
-
       })
 
 resetBtn.addEventListener("click", () => {
