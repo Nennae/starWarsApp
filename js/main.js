@@ -8,7 +8,6 @@ import { getCharacters } from "../js/swapi.js";
       let characterIntro1 = document.querySelector(".characterIntro1");
       let characterIntro2 = document.querySelector(".characterIntro2");
 
-      // Creates elements and their content for selected characters 
       function createCharCard (character, otherChar) {
             let characterCard = document.querySelector(".characterIntro");
 
@@ -48,13 +47,7 @@ import { getCharacters } from "../js/swapi.js";
             buttonContainer.appendChild(genderBtn);
             buttonContainer.appendChild(haircolorBtn);
             characterCard.appendChild(buttonContainer);
-            // characterCard.appendChild(weightBtn);
-            // characterCard.appendChild(heightBtn);
-            // characterCard.appendChild(haircolorBtn);
-
-            // characterContainer.appendChild(characterCard);
-
-            // Eventlisteners for the comparison buttons
+      
                   weightBtn.addEventListener("click", (e) => {
                         let weightDiff = character.compareWeight(otherChar);
                         e.preventDefault();
